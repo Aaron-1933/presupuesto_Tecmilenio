@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="cabecero">
+        <div class="presupuesto">
+            <div class="presupuesto_titulo">
+                <p>Presupuesto Disponible</p>
+            </div>
+            <div class="presupuesto_valor">
+                <p>+2,000.oo</p>
+            </div>
+            <div class="presupuesto_ingreso limpiarEstilos">
+                <div class="presupuesto_ingreso--texto">
+                    <p>Ingresos</p>
+                </div>
+                <div class="derecha">
+                    <div class="presupuesto_ingreso--valor">
+                        <p>+4,000.00</p>
+                    </div>
+                    <div class="presupuesto_ingreso--porcentaje"> </div>
+                </div>
+            </div>
+            <div class="presupuesto_egreso limpiarEstilos">
+                <div class="presupuesto_egreso--texto"><p>Egresos</p></div>
+                <div class="derecha limpiarEstilos">
+                    <div class="presupuesto_egreso--valor"><p>-1,900.00</p></div>
+                    <div class="presupuesto_egreso--porcentaje"><p>45%</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="forma" action=""></form>
+    <div class="agregar">
+        <div class="agregar_contenedor">
+            <select class="agregar_tipo" name="" id="tipo">
+                <option value="ingreso" selected>+</option>
+                <option value="egreso">-</option>
+            </select>
+            <input type="text" id="descripcion" class="agregar_descripcion" placeholder="Agregar Descripcion">
+            <input type="number" class="agregar_valor" value="0" step="any">
+            <input type="text" >
+            <button class="agregar_btn">
+    <ion-icon name="checkmark-circle-outline"></ion-icon>
+</button>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
