@@ -1,12 +1,12 @@
-let egresos = {
-    Renta: 900,
-    Ropa: 400
-};
+const egresos = [
+    new Egreso('Renta', 4000),
+    new Egreso('Ropa', 800)
+];
 
-let ingresos = {
-    Quincena: 9000,
-    Venta: 400
-};
+const ingresos = [
+    new Ingreso('Salario', 20000),
+    new Ingreso('Venta auto', 50000)
+];
 
 
 const cargarCabecero =  () => {
@@ -21,18 +21,17 @@ const cargarCabecero =  () => {
 
 const totalIngresos = () => {
     let totalIngresos = 0;
-    for(let ingreso of Object.values(ingresos)) { //lo tuve que cambair a objeto para probar
-        totalIngresos += ingreso;
+    for(let ingreso of ingresos) { //lo tuve que cambair a objeto para probar
+        totalIngresos += ingreso.valor;
     }
     return totalIngresos;
 }
 
 const totalEgresos = () => {
     let totalEgreso = 0;
-    for(let egreso of Object.values(egresos)) {
-        totalEgreso += egreso; //x2
+    for(let egreso of egresos) {
+        totalEgreso += egreso.valor;
     }
-
     return totalEgreso;
 }
 
@@ -40,7 +39,7 @@ const formatoMoneda = (valor) => {
     return valor.toLocaleString('es-Mx', {
         style: 'currency',
         currency: 'MXN',
-        minimunFractionDigits: 2
+        minimumFractionDigits: 2
     });
 }
 
