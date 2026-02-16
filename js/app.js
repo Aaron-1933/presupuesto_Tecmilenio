@@ -163,6 +163,11 @@ const agregarDato = () => {
       cargarCabecero();
       cargarEgresos();
     }
+
+     //esto no viene en la presentacion (lo hice para limpiar el formulario al registrar un movimiento)
+    forma["descripcion"].value = "";
+    forma["valor"].value = "";
+    forma["descripcion"].focus();
   }
 };
 // cargarCabecero();
