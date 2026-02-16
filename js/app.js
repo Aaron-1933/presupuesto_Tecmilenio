@@ -33,7 +33,7 @@ const totalEgresos = () => {
 
 const formatoMoneda = (valor) => {
   return valor.toLocaleString("es-Mx", {
-    style: "currency", //porque se usa esto
+    style: "currency",
     currency: "MXN",
     minimumFractionDigits: 2,
   });
@@ -41,7 +41,7 @@ const formatoMoneda = (valor) => {
 
 const formatoPorcentaje = (valor) => {
   return valor.toLocaleString("es-MX", {
-    style: "percent", //porque se usa esto
+    style: "percent",
     minimumFractionDigits: 2,
   });
 };
@@ -99,7 +99,7 @@ const crearIngresoHTML = (ingreso) => {
 };
 
 const crearEgresoHTML = (egreso) => {
-  let porcentajeEgreso = egreso.valor / totalIngresos(); //agregado con ia y la 114
+  let porcentajeEgreso = egreso.valor / totalIngresos();
   let egresoHTML = `
     <div class="elemento limpiarEstilos">
       <div class="elemento_descripcion">
@@ -110,7 +110,7 @@ const crearEgresoHTML = (egreso) => {
         <div class="elemento_valor">
           <p>${formatoMoneda(egreso.valor)}</p>
         </div>
-
+        
       <div class="elemento_porcentaje">
           <p>${formatoPorcentaje(porcentajeEgreso)}</p>
         </div>
