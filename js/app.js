@@ -4,7 +4,7 @@ const ingresos = [];
 
 const cargarCabecero = () => {
   let presupuesto = totalIngresos() - totalEgresos();
-  let porcentajeEgreso = totalEgresos() / totalIngresos();
+  let porcentajeEgreso = totalIngresos() === 0 ? 0 : totalEgresos() / totalIngresos();
 
   document.getElementById("presupuesto").innerHTML = formatoMoneda(presupuesto);
 
